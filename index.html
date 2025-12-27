@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MutualFund Insight - Smart Investment Platform providing detailed information about mutual funds, their structure, risks, and factors that influence investment decisions">
+    <title>MutualFund Insight - Smart Investment Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="logo" aria-label="MutualFund Insight logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <span aria-label="MutualFund Insight">MutualFund<span class="logo-accent">Insight</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active" aria-current="pagAe">Home</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+                <a href="funds.html" class="nav-link">Funds</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="reports.html" class="nav-link">Reports</a>
+            </div>
+            <div class="role-selector">
+                <label for="roleSelect" class="sr-only">Select Role</label>
+                <select id="roleSelect" class="role-dropdown" aria-label="Select user role">
+                    <option value="investor">👤 Investor</option>
+                    <option value="advisor">💼 Financial Advisor</option>
+                    <option value="analyst">📊 Data Analyst</option>
+                    <option value="admin">⚙️ Admin</option>
+                </select>
+            </div>
+        </nav>
+        
+        <div class="hero-content" id="home">
+            <div class="hero-text">
+                <h1 class="hero-title" aria-level="1" role="heading">Academic Project: Investment Perception & Selection Behavior</h1>
+                <p class="hero-subtitle">A comprehensive platform analyzing mutual fund investment patterns, risk assessment, and behavioral finance principles</p>
+                <div class="hero-stats" role="group" aria-label="Platform statistics">
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="Mutual Funds">50+</div>
+                        <div class="stat-label">Mutual Funds</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="Average Returns">15%</div>
+                        <div class="stat-label">Avg. Returns</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="Investors">10K+</div>
+                        <div class="stat-label">Investors</div>
+                    </div>
+                </div>
+                <a href="funds.html" class="cta-button" aria-label="Explore mutual funds">Explore Investment Options</a>
+            </div>
+            <div class="hero-illustration" role="presentation">
+                <div class="floating-card card-1" aria-label="Equity Funds performance +16.5%">
+                    <div class="mini-chart" aria-hidden="true">📈</div>
+                    <div class="card-text">Equity Funds<br><span class="highlight">+16.5%</span></div>
+                </div>
+                <div class="floating-card card-2" aria-label="Debt Funds performance +7.2%">
+                    <div class="mini-chart" aria-hidden="true">💰</div>
+                    <div class="card-text">Debt Funds<br><span class="highlight">+7.2%</span></div>
+                </div>
+                <div class="floating-card card-3" aria-label="Hybrid Funds performance +11.3%">
+                    <div class="mini-chart" aria-hidden="true">⚖️</div>
+                    <div class="card-text">Hybrid Funds<br><span class="highlight">+11.3%</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <!-- This is the home page - content moved to separate pages -->
+        <section class="home-introduction" aria-labelledby="home-intro-title">
+            <h2 id="home-intro-title" class="sr-only">Mutual Fund Investment Platform Introduction</h2>
+            <p class="sr-only">Welcome to MutualFund Insight, your comprehensive platform for understanding mutual funds, their structure, risks, and factors that influence investment decisions.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo" aria-label="MutualFund Insight">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    <span>MutualFund<span class="logo-accent">Insight</span></span>
+                </div>
+                <p>Empowering smart investment decisions through education and data-driven insights.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="overview.html" aria-label="Overview of mutual funds">Overview</a>
+                    <a href="funds.html" aria-label="Explore mutual funds">Explore Funds</a>
+                    <a href="education.html" aria-label="Investment education resources">Education</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="analytics.html" aria-label="Analytics and performance data">Analytics</a>
+                    <a href="reports.html" aria-label="Platform reports and administration">Reports</a>
+                    <a href="#" aria-label="Documentation and help">Documentation</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#" aria-label="Terms of service">Terms of Service</a>
+                    <a href="#" aria-label="Privacy policy">Privacy Policy</a>
+                    <a href="#" aria-label="Disclaimer">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MutualFundInsight. Academic Research Project on Investment Perception & Selection Behavior in Mutual Funds.</p>
+        </div>
+    </footer>
+</body>
+</html>

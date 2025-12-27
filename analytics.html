@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MutualFund Insight - Analytics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <span>MutualFund<span class="logo-accent">Insight</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+                <a href="funds.html" class="nav-link">Funds</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="analytics.html" class="nav-link active">Analytics</a>
+                <a href="reports.html" class="nav-link">Reports</a>
+            </div>
+            <div class="role-selector">
+                <select id="roleSelect" class="role-dropdown">
+                    <option value="investor">👤 Investor</option>
+                    <option value="advisor">💼 Financial Advisor</option>
+                    <option value="analyst">📊 Data Analyst</option>
+                    <option value="admin">⚙️ Admin</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Analytics Section -->
+        <section class="section analytics-section">
+            <div class="section-header">
+                <h2 class="section-title">Investment Behavior Analytics</h2>
+                <p class="section-subtitle">Data analysis of mutual fund selection patterns and performance</p>
+            </div>
+
+            <div class="cards-grid two-col">
+                <div class="info-card chart-card">
+                    <h3>📊 Category-wise Average Returns (3Y)</h3>
+                    <canvas id="categoryChart" height="200"></canvas>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚡ Risk Distribution</h3>
+                    <div id="riskDistribution" class="risk-bars">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="analytics-insights">
+                        <h4>Key Insights</h4>
+                        <ul class="feature-list">
+                            <li>Compare returns across fund categories</li>
+                            <li>Balance risk exposure in your portfolio</li>
+                            <li>Track performance trends over time</li>
+                            <li>Identify over/under-exposure areas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card analyst-tools">
+                <h3>🔧 Fund Performance Update Tool</h3>
+                <form id="updateForm" class="update-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="updateFundSelect">Select Fund</label>
+                            <select id="updateFundSelect" class="filter-select">
+                                <!-- Populated by JS -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateCAGR">New 3Y CAGR (%)</label>
+                            <input type="number" id="updateCAGR" step="0.1" class="filter-select" placeholder="0.0" />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-update">Update Performance</button>
+                        </div>
+                    </div>
+                    <p class="form-note">Note: Updates are applied to the current session only (demo purposes)</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    <span>MutualFund<span class="logo-accent">Insight</span></span>
+                </div>
+                <p>Empowering smart investment decisions through education and data-driven insights.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="overview.html">Overview</a>
+                    <a href="funds.html">Explore Funds</a>
+                    <a href="education.html">Education</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="analytics.html">Analytics</a>
+                    <a href="reports.html">Reports</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MutualFundInsight. Academic Research Project on Investment Perception & Selection Behavior in Mutual Funds.</p>
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+    <script>
+        // Initialize only analytics functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAnalytics();
+            setupEventListeners();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MutualFund Insight - Reports</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <span>MutualFund<span class="logo-accent">Insight</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+                <a href="funds.html" class="nav-link">Funds</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="reports.html" class="nav-link active">Reports</a>
+            </div>
+            <div class="role-selector">
+                <select id="roleSelect" class="role-dropdown">
+                    <option value="investor">👤 Investor</option>
+                    <option value="advisor">💼 Financial Advisor</option>
+                    <option value="analyst">📊 Data Analyst</option>
+                    <option value="admin">⚙️ Admin</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Reports Section -->
+        <section class="section reports-section">
+            <div class="section-header">
+                <h2 class="section-title">Academic Research Dashboard</h2>
+                <p class="section-subtitle">Platform metrics and investment behavior analysis</p>
+            </div>
+
+            <div class="cards-grid three-col">
+                <div class="info-card stat-card-admin">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-value" id="totalFunds">0</div>
+                    <div class="stat-label">Total Funds</div>
+                </div>
+                <div class="info-card stat-card-admin">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value">10,247</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="info-card stat-card-admin">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-value" id="avgRisk">-</div>
+                    <div class="stat-label">Avg Risk Level</div>
+                </div>
+            </div>
+
+            <div class="cards-grid two-col">
+                <div class="info-card">
+                    <h3>📊 Fund Distribution</h3>
+                    <div id="fundDistribution" class="distribution-bars">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🎯 Key Performance Indicators</h3>
+                    <ul class="feature-list">
+                        <li><strong>User Engagement:</strong> Active investors, advisors, and sessions</li>
+                        <li><strong>Popular Funds:</strong> Most viewed and compared funds</li>
+                        <li><strong>Page Analytics:</strong> Time spent on education vs trading pages</li>
+                        <li><strong>Data Updates:</strong> Frequency and accuracy of analyst updates</li>
+                        <li><strong>Compliance:</strong> Regulatory checks and fund certifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card governance-card">
+                <h3>⚙️ Governance & Policies</h3>
+                <div class="governance-grid">
+                    <div class="governance-item">
+                        <strong>Data Refresh Cycles</strong>
+                        <p>Daily NAV updates, weekly performance metrics, monthly rebalancing reports</p>
+                    </div>
+                    <div class="governance-item">
+                        <strong>Advisor Approval Workflow</strong>
+                        <p>Content review process, certification requirements, compliance checks</p>
+                    </div>
+                    <div class="governance-item">
+                        <strong>Suitability Framework</strong>
+                        <p>Risk profiling standards, recommendation guidelines, disclosure requirements</p>
+                    </div>
+                    <div class="governance-item">
+                        <strong>User Access Controls</strong>
+                        <p>Role-based permissions, audit trails, data privacy protection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    <span>MutualFund<span class="logo-accent">Insight</span></span>
+                </div>
+                <p>Empowering smart investment decisions through education and data-driven insights.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="overview.html">Overview</a>
+                    <a href="funds.html">Explore Funds</a>
+                    <a href="education.html">Education</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="analytics.html">Analytics</a>
+                    <a href="reports.html">Reports</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MutualFundInsight. Academic Research Project on Investment Perception & Selection Behavior in Mutual Funds.</p>
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+    <script>
+        // Initialize only reports functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            renderReports();
+            setupEventListeners();
+        });
+    </script>
+</body>
+</html>

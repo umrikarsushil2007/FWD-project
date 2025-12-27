@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MutualFund Insight - Education</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <span>MutualFund<span class="logo-accent">Insight</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+                <a href="funds.html" class="nav-link">Funds</a>
+                <a href="education.html" class="nav-link active">Education</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="reports.html" class="nav-link">Reports</a>
+            </div>
+            <div class="role-selector">
+                <select id="roleSelect" class="role-dropdown">
+                    <option value="investor">👤 Investor</option>
+                    <option value="advisor">💼 Financial Advisor</option>
+                    <option value="analyst">📊 Data Analyst</option>
+                    <option value="admin">⚙️ Admin</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Education Section -->
+        <section class="section education-section">
+            <div class="section-header">
+                <h2 class="section-title">Behavioral Finance Education</h2>
+                <p class="section-subtitle">Understanding investment perception and decision-making patterns</p>
+            </div>
+
+            <div class="cards-grid two-col">
+                <div class="info-card edu-card">
+                    <div class="card-icon">📝</div>
+                    <h3>Risk Profiling Questionnaire</h3>
+                    <ol class="questionnaire-list">
+                        <li>What is your primary investment goal?
+                            <span class="hint">(Growth, Income, Capital Preservation)</span>
+                        </li>
+                        <li>What is your investment time horizon?
+                            <span class="hint">(Short-term, Medium-term, Long-term)</span>
+                        </li>
+                        <li>How would you react to a 20% portfolio decline?
+                            <span class="hint">(Sell immediately, Hold, Buy more)</span>
+                        </li>
+                        <li>What portion of income can you invest monthly?
+                            <span class="hint">(0-10%, 10-20%, 20%+)</span>
+                        </li>
+                        <li>Do you have an emergency fund?
+                            <span class="hint">(6-12 months expenses)</span>
+                        </li>
+                    </ol>
+                    <p class="edu-note">Based on your answers, advisors can recommend suitable fund categories: Equity (Aggressive), Hybrid (Balanced), or Debt (Conservative)</p>
+                </div>
+
+                <div class="info-card edu-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Behavioral Biases to Avoid</h3>
+                    <div class="bias-list">
+                        <div class="bias-item">
+                            <strong>Herding Behavior:</strong>
+                            <p>Following the crowd without independent analysis</p>
+                        </div>
+                        <div class="bias-item">
+                            <strong>Recency Bias:</strong>
+                            <p>Overweighting recent performance trends</p>
+                        </div>
+                        <div class="bias-item">
+                            <strong>Loss Aversion:</strong>
+                            <p>Fear of losses leading to overly conservative choices</p>
+                        </div>
+                        <div class="bias-item">
+                            <strong>Overconfidence:</strong>
+                            <p>Overestimating your investment knowledge</p>
+                        </div>
+                        <div class="bias-item">
+                            <strong>Anchoring:</strong>
+                            <p>Relying too heavily on first information received</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-grid two-col">
+                <div class="info-card edu-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Key Performance Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <strong>NAV (Net Asset Value)</strong>
+                            <p>Per-unit value of the fund's portfolio</p>
+                        </div>
+                        <div class="metric-item">
+                            <strong>Expense Ratio</strong>
+                            <p>Annual fees as % of assets</p>
+                        </div>
+                        <div class="metric-item">
+                            <strong>Alpha</strong>
+                            <p>Excess returns vs benchmark</p>
+                        </div>
+                        <div class="metric-item">
+                            <strong>Beta</strong>
+                            <p>Volatility relative to market</p>
+                        </div>
+                        <div class="metric-item">
+                            <strong>Sharpe Ratio</strong>
+                            <p>Risk-adjusted returns (higher is better)</p>
+                        </div>
+                        <div class="metric-item">
+                            <strong>Standard Deviation</strong>
+                            <p>Measure of return volatility</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card edu-card advisor-tools">
+                    <div class="card-icon">💡</div>
+                    <h3>Advisor Recommendation Framework</h3>
+                    <ol class="framework-list">
+                        <li>Understand client's financial goals and objectives</li>
+                        <li>Assess risk tolerance and investment horizon</li>
+                        <li>Map profile to suitable fund categories</li>
+                        <li>Shortlist 3-5 funds based on consistency and cost</li>
+                        <li>Explain risk-return trade-offs clearly</li>
+                        <li>Document recommendations and review annually</li>
+                    </ol>
+                    <div class="advisor-note-section">
+                        <label for="advisorNotes">Session Notes</label>
+                        <textarea id="advisorNotes" placeholder="Write client notes, recommendations, and action items..." rows="4"></textarea>
+                        <button class="btn-save" id="saveNotes">💾 Save Notes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    <span>MutualFund<span class="logo-accent">Insight</span></span>
+                </div>
+                <p>Empowering smart investment decisions through education and data-driven insights.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="overview.html">Overview</a>
+                    <a href="funds.html">Explore Funds</a>
+                    <a href="education.html">Education</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="analytics.html">Analytics</a>
+                    <a href="reports.html">Reports</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MutualFundInsight. Academic Research Project on Investment Perception & Selection Behavior in Mutual Funds.</p>
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+    <script>
+        // Initialize only education functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            setupEventListeners();
+            loadAdvisorNotes();
+        });
+    </script>
+</body>
+</html>

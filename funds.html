@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MutualFund Insight - Funds</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <span>MutualFund<span class="logo-accent">Insight</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+                <a href="funds.html" class="nav-link active">Funds</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="reports.html" class="nav-link">Reports</a>
+            </div>
+            <div class="role-selector">
+                <select id="roleSelect" class="role-dropdown">
+                    <option value="investor">👤 Investor</option>
+                    <option value="advisor">💼 Financial Advisor</option>
+                    <option value="analyst">📊 Data Analyst</option>
+                    <option value="admin">⚙️ Admin</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Funds Section -->
+        <section class="section funds-section">
+            <div class="section-header">
+                <h2 class="section-title">Mutual Fund Investment Analysis</h2>
+                <p class="section-subtitle">Comparative analysis of fund performance and selection behavior</p>
+            </div>
+
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="equity">Equity</option>
+                        <option value="debt">Debt</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Risk Level</label>
+                    <select id="riskFilter" class="filter-select">
+                        <option value="all">All Risk Levels</option>
+                        <option value="low">Low</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="filter-group search-group">
+                    <label>Search</label>
+                    <input type="text" id="searchFund" class="search-input" placeholder="Search fund name..." />
+                </div>
+            </div>
+
+            <div class="funds-container">
+                <div class="funds-table-wrapper">
+                    <table class="funds-table" id="fundsTable">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="selectAll" /></th>
+                                <th>Fund Name</th>
+                                <th>Category</th>
+                                <th>Risk</th>
+                                <th>3Y Returns</th>
+                                <th>Expense Ratio</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fundsTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <aside class="fund-details-panel" id="fundDetailsPanel">
+                    <h3>Fund Details</h3>
+                    <div class="details-placeholder">
+                        <div class="placeholder-icon">📋</div>
+                        <p>Select a fund to view detailed information</p>
+                    </div>
+                    <div class="details-content hidden" id="detailsContent">
+                        <!-- Populated by JS -->
+                    </div>
+                </aside>
+            </div>
+
+            <div class="comparison-section" id="comparisonSection">
+                <h3>Compare Selected Funds</h3>
+                <p class="comparison-hint">Select up to 3 funds to compare side by side</p>
+                <div class="comparison-grid" id="comparisonGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    <span>MutualFund<span class="logo-accent">Insight</span></span>
+                </div>
+                <p>Empowering smart investment decisions through education and data-driven insights.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="overview.html">Overview</a>
+                    <a href="funds.html">Explore Funds</a>
+                    <a href="education.html">Education</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="analytics.html">Analytics</a>
+                    <a href="reports.html">Reports</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MutualFundInsight. Academic Research Project on Investment Perception & Selection Behavior in Mutual Funds.</p>
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+    <script>
+        // Initialize only funds functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFundsTable(fundsData);
+            setupEventListeners();
+        });
+    </script>
+</body>
+</html>
